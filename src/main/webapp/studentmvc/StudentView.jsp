@@ -10,7 +10,7 @@
 <body>
 	<div class="container">
 		<h2>Form Nhập Thông Tin Sinh Viên</h2>
-		<form id="studentForm">
+		<form id="studentForm" action="StudentController.jsp" method="POST">
 			<div class="form-group">
 				<label for="idstudent">ID Sinh viên:</label> <input type="text"
 					class="form-control" id="idstudent" name="idstudent"

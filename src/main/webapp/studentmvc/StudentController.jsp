@@ -12,11 +12,14 @@
 </head>
 <body>
 <%
-	String hoten = (String) request.getAttribute("hoten");
-	Date ngaysinh = (Date)request.getAttribute("ngaysinh"); 
-	String gioitinh = (String)request.getAttribute("gioitinh");
-	String sdt = (String)request.getAttribute("sodienthoai");
+	//Lay du lieu tu form
+	String hoten = (String) request.getParameter("hoten");
+	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+	Date ngaysinh = df.parse(request.getParameter("ngaysinh")); 
+	String gioitinh = (String)request.getParameter("gioitinh");
+	String sdt = (String)request.getParameter("sodienthoai");
 	out.println(hoten + "; " + ngaysinh.toString() + "; " + gioitinh);
+	
 %>
 </body>
 </html>
