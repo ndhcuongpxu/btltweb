@@ -15,10 +15,10 @@
 	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 	Date ngaysinh = df.parse(request.getParameter("ngaysinh"));
 	String gioitinh = (String) request.getParameter("gioitinh");
-	String sdt = (String) request.getParameter("sodienthoai");
+	String sdt = (String) request.getParameter("sdt");
 	out.println(hoten + "; " + ngaysinh.toString() + "; " + gioitinh);
 	//Goi StudentModel de luu doi tuong sv vao CSDL
-	Student sv = new Student();
+	/* Student sv = new Student();
 	sv.setHoten(hoten);
 	sv.setGioitinh(gioitinh);
 	sv.setNgaysinh(ngaysinh);
@@ -34,7 +34,7 @@
 	RequestDispatcher dispatcher = request.getRequestDispatcher("message.jsp");
 	if (dispatcher != null) {
 		dispatcher.forward(request, response);
-	}
+	} */
 	%>
 </body>
 </html>

@@ -34,6 +34,7 @@
 					class="form-control" id="gioitinh" name="gioitinh">
 					<option value="Nam">Nam</option>
 					<option value="Nữ">Nữ</option>
+					<option value="Không xác định">Không xác định</option>
 				</select>
 			</div>
 			<div class="form-group">
