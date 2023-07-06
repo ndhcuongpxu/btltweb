@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.text.SimpleDateFormat;
 
 public class StudentModel {
-	static Connection conn;
+	static Connection conn = null;
 	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
 	public StudentModel() {
@@ -17,7 +17,7 @@ public class StudentModel {
 		boolean flag = true;
 		try {
 
-			String sql = "insert into  student(hoten,ngaysinh,gioitinh,sdt) values(?,?,?,?)";
+			String sql = "insert into student(hoten,ngaysinh,gioitinh,sdt) values(?,?,?,?)";
 
 			PreparedStatement statement = conn.prepareStatement(sql);
 			statement.setString(1, input.getHoten());
@@ -26,6 +26,7 @@ public class StudentModel {
 			if (input.getSdt() != null) {
 				statement.setString(4, input.getSdt());
 			}
+			
 			// Step 6: Process the results
 			statement.execute();
 			statement.close();

@@ -16,9 +16,9 @@
 	Date ngaysinh = df.parse(request.getParameter("ngaysinh"));
 	String gioitinh = (String) request.getParameter("gioitinh");
 	String sdt = (String) request.getParameter("sdt");
-	out.println(hoten + "; " + ngaysinh.toString() + "; " + gioitinh);
+	//out.println(hoten + "; " + ngaysinh.toString() + "; " + gioitinh + "; " + sdt);
 	//Goi StudentModel de luu doi tuong sv vao CSDL
-	/* Student sv = new Student();
+	Student sv = new Student();
 	sv.setHoten(hoten);
 	sv.setGioitinh(gioitinh);
 	sv.setNgaysinh(ngaysinh);
@@ -27,14 +27,13 @@
 	boolean kq = myModel.addStudent(sv);
 	if (kq) {
 		request.setAttribute("message", "THEM SINH VIEN THANH CONG");
-
 	} else {
 		request.setAttribute("message", "THEM SINH VIEN THAT BAI");
 	}
 	RequestDispatcher dispatcher = request.getRequestDispatcher("message.jsp");
 	if (dispatcher != null) {
 		dispatcher.forward(request, response);
-	} */
+	}
 	%>
 </body>
 </html>
