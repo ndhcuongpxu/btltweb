@@ -8,6 +8,22 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+<%
+	String user = (String)session.getAttribute("user");
+	if(user == null){
+		request.setAttribute("message", "CHUA DANG NHAP");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("../loginmvc/login.jsp");
+		if (dispatcher != null) {
+			dispatcher.forward(request, response);
+		}
+	}
+		
+	String msg = (String) request.getAttribute("message");
+	if(msg != null){
+		out.print(msg);
+	}
+	
+	%>
 	<div class="container">
 		<h2>Form Nhập Thông Tin Sinh Viên</h2>
 		<form id="studentForm" action="StudentController.jsp" method="POST">

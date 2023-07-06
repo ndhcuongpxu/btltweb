@@ -10,6 +10,14 @@
 </head>
 <body>
 	<%
+	String user = (String)session.getAttribute("user");
+	if(user == null){
+		request.setAttribute("message", "CHUA DANG NHAP");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("../loginmvc/login.jsp");
+		if (dispatcher != null) {
+			dispatcher.forward(request, response);
+		}
+	}
 	//Lay du lieu tu form
 	String hoten = (String) request.getParameter("hoten");
 	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
@@ -30,7 +38,7 @@
 	} else {
 		request.setAttribute("message", "THEM SINH VIEN THAT BAI");
 	}
-	RequestDispatcher dispatcher = request.getRequestDispatcher("message.jsp");
+	RequestDispatcher dispatcher = request.getRequestDispatcher("StudentView.jsp");
 	if (dispatcher != null) {
 		dispatcher.forward(request, response);
 	}
