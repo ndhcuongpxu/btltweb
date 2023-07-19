@@ -20,4 +20,33 @@
 		<servlet-name>pxu.edu.vn.bt1v2.ProductController</servlet-name>
 		<url-pattern>/ProductController</url-pattern>
 	</servlet-mapping>
+	
+	<context-param>
+		<param-name>dbServer</param-name>
+		<param-value>mysql</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbAddress</param-name>
+		<param-value>localhost</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbPort</param-name>
+		<param-value>3306</param-value>
+	</context-param>
+	<context-param>
+		<param-name>database</param-name>
+		<param-value>qlsv</param-value>
+	</context-param>
+	<context-param>
+		<param-name>username</param-name>
+		<param-value>root</param-value>
+	</context-param>
+	<context-param>
+		<param-name>password</param-name>
+		<param-value>@Dmin1234</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbDriver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
 </web-app>
