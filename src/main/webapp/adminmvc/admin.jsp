@@ -12,6 +12,7 @@
 	if(user != null){
 		%>
 		<a href="../studentmvc/StudentView.jsp">Nhap sinh vien</a>
+		<a href="../studentmvc2/StudentView.jsp">Nhap sinh vien version 2</a>
 		<%
 	}else{
 		request.setAttribute("message", "CHUA DANG NHAP");
