@@ -35,7 +35,7 @@
 	sv.setNgaysinh(ngaysinh);
 	sv.setSdt(sdt);
 	//Lay ket noi toi CSDL
-	if(DBConnection.getDbConnection() == null){
+	if(DBConnection.dbConnection == null){
 		//Chua co ket noi toi CSDL nen phai khoi tao
 		String dbServer = application.getInitParameter("dbServer");
 		String dbAddress = application.getInitParameter("dbAddress");
